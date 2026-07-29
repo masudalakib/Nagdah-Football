@@ -27,8 +27,9 @@
   }
   .page{
     width:210mm;
-    min-height:297mm;
-    margin:10mm auto;
+    max-width:210mm;
+    min-height:auto;
+    margin:6mm auto;
     background:
       radial-gradient(circle at 50% 0%, #ffffff22, transparent 60%),
       linear-gradient(180deg,var(--paper) 0%, #f3e9cf 100%);
@@ -58,8 +59,8 @@
   
   .header{
     position:relative;
-    margin:11mm 11mm 0;
-    padding:9mm 10mm 10mm;
+    margin:5mm 11mm 0;
+    padding:4mm 10mm 4.5mm;
     text-align:center;
     background:
       linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 30%),
@@ -88,10 +89,10 @@
   .title-bn{
     font-family:'Noto Serif Bengali', serif;
     font-weight:800;
-    font-size:26px;
-    line-height:1.35;
+    font-size:21px;
+    line-height:1.3;
     color:#fefbe8;
-    margin-top:2mm;
+    margin-top:1mm;
     text-shadow:
       0 1px 0 rgba(255,255,255,0.35),
       0 2px 3px rgba(0,0,0,0.55),
@@ -103,8 +104,8 @@
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:34mm; height:14mm;
-    margin-top:3mm;
+    width:28mm; height:10.5mm;
+    margin-top:1.5mm;
     background:radial-gradient(ellipse at 40% 25%, #fff6d0, var(--gold) 55%, var(--gold-dk) 100%);
     border-radius:10px;
     border:1.5px solid #6e4c0f;
@@ -116,22 +117,22 @@
   .year-medal span{
     font-family:'Cinzel', serif;
     font-weight:900;
-    font-size:24px;
+    font-size:19px;
     letter-spacing:0.05em;
     color:#4a2f05;
     text-shadow:0 1px 0 rgba(255,255,255,0.6);
   }
 
   .venue-line{
-    margin-top:4mm;
-    font-size:12.5px;
+    margin-top:2mm;
+    font-size:11px;
     font-weight:700;
     color:var(--cream);
     display:inline-flex;
     align-items:center;
     gap:2mm;
     background:linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.35));
-    padding:2mm 6mm;
+    padding:1.5mm 5mm;
     border-radius:30px;
     border:1px solid rgba(255,255,255,0.3);
     box-shadow:inset 0 1px 2px rgba(255,255,255,0.2);
@@ -141,11 +142,11 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:7mm 16mm 3mm;
+    padding:3mm 16mm 1.5mm;
   }
-  .portrait-card{ display:flex; flex-direction:column; align-items:center; width:40mm; }
+  .portrait-card{ display:flex; flex-direction:column; align-items:center; width:38mm; }
   .medallion{
-    width:34mm; height:34mm;
+    width:28mm; height:28mm;
     border-radius:50%;
     padding:0;
     background:conic-gradient(from 200deg, #d3b118, var(--gold) 25%, var(--gold-dk) 50%, var(--gold) 75%, #fff6d0 100%);
@@ -170,10 +171,10 @@
     background:repeating-linear-gradient(45deg,#f1e4bd 0 6px,#faf2da 6px 12px);
   }
   .portrait-label{
-    margin-top:2.3mm;
+    margin-top:1.5mm;
     font-family:'Noto Serif Bengali', serif;
     font-weight:800;
-    font-size:11px;
+    font-size:10px;
     color:var(--green-dk);
     text-align:center;
     text-shadow:0 1px 0 rgba(255,255,255,0.6);
@@ -182,7 +183,7 @@
 
   .center-emblem{ display:flex; flex-direction:column; align-items:center; }
   .ball3d{
-    width:19mm; height:19mm; border-radius:50%;
+    width:16mm; height:16mm; border-radius:50%;
     background:radial-gradient(circle at 32% 28%, #ffffff, #e7e7e7 55%, #a9a9a9 100%);
     box-shadow:
       inset -3px -3px 6px rgba(0,0,0,0.35),
@@ -190,32 +191,32 @@
       0 5px 8px rgba(0,0,0,0.4);
     position:relative;
   }
-  .vs-text{
-    font-family:'Cinzel', serif; font-size:8.5px; letter-spacing:0.18em;
-    color:var(--maroon); margin-top:2.3mm; font-weight:800;
+  .d-teams{
+    font-family:'Cinzel', serif; font-size:9px; letter-spacing:0.1em;
+    color:var(--gold-lt); font-weight:800; white-space:nowrap;
   }
 
   /* ===== INTRO ===== */
   .intro{
-    margin:2mm 16mm 0;
-    padding:4mm 5mm;
-    font-size:11px; line-height:1.8; text-align:justify;
+    margin:1mm 16mm 0;
+    padding:3mm 5mm;
+    font-size:10px; line-height:1.55; text-align:justify;
     background:rgba(255,255,255,0.55);
     border-radius:8px;
     border:1px solid var(--gold);
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.06);
   }
-  .intro .salam{ font-weight:800; color:var(--green-dk); display:block; margin-bottom:1.5mm; font-size:12px; }
+  .intro .salam{ font-weight:800; color:var(--green-dk); display:block; margin-bottom:1mm; font-size:11px; }
   .intro .quote{ color:var(--maroon); font-weight:800; }
 
 
   .section-title{
     display:flex; align-items:center; gap:3mm;
-    margin:5mm 16mm 3mm;
+    margin:3mm 16mm 2mm;
     font-family:'Noto Serif Bengali', serif;
-    font-weight:800; font-size:14.5px; color:#fefbe8;
+    font-weight:800; font-size:13px; color:#fefbe8;
     background:linear-gradient(180deg, var(--green-lt), var(--green) 55%, var(--green-dk));
-    padding:2.3mm 6mm;
+    padding:1.8mm 6mm;
     border-radius:24px;
     width:fit-content;
     box-shadow:
@@ -226,12 +227,12 @@
   }
 
   /* ===== RULES ===== */
-  .rules{ margin:0 16mm 5mm; display:flex; flex-direction:column; gap:2.2mm; }
-  .rule-item{ display:flex; gap:3mm; align-items:flex-start; font-size:10.8px; line-height:1.55; }
+  .rules{ margin:0 16mm 3mm; display:flex; flex-direction:column; gap:1.5mm; }
+  .rule-item{ display:flex; gap:3mm; align-items:flex-start; font-size:9.8px; line-height:1.4; }
   .rule-num{
-    flex:0 0 auto; width:6.5mm; height:6.5mm; border-radius:50%;
+    flex:0 0 auto; width:5.5mm; height:5.5mm; border-radius:50%;
     display:flex; align-items:center; justify-content:center;
-    color:#fff; font-weight:800; font-size:10px; font-family:'Cinzel',serif;
+    color:#fff; font-weight:800; font-size:9px; font-family:'Cinzel',serif;
     box-shadow:
       inset 0 2px 0 rgba(255,255,255,0.5),
       inset 0 -3px 5px rgba(0,0,0,0.4),
@@ -244,11 +245,11 @@
   .rule-item:nth-child(5) .rule-num{background:#5a3d0f;}
 
   /* ===== FEE + PRIZES ===== */
-  .highlight-row{ display:flex; gap:5mm; margin:2mm 16mm 6mm; }
+  .highlight-row{ display:flex; gap:4mm; margin:1mm 16mm 3.5mm; }
   .fee-box{
-    flex:0 0 40mm;
+    flex:0 0 38mm;
     background:linear-gradient(160deg, var(--maroon-lt), var(--maroon) 60%, #4c0f1b);
-    color:#fff; border-radius:12px; padding:4mm 3mm;
+    color:#fff; border-radius:12px; padding:2.5mm 3mm;
     text-align:center; display:flex; flex-direction:column; justify-content:center;
     box-shadow:
       inset 0 2px 0 rgba(255,255,255,0.3),
@@ -261,7 +262,7 @@
 
   .prizes{ flex:1; display:flex; gap:4mm; }
   .prize-card{
-    flex:1; border-radius:12px; padding:3.5mm 3mm; text-align:center; position:relative;
+    flex:1; border-radius:12px; padding:2.3mm 3mm; text-align:center; position:relative;
     box-shadow:
       inset 0 2px 0 rgba(255,255,255,0.5),
       inset 0 -6px 10px rgba(0,0,0,0.3),
@@ -277,12 +278,12 @@
 
   /* ===== ORGANIZER ===== */
   .organizer{
-    margin:0 16mm 5mm;
+    margin:0 16mm 3mm;
     background:rgba(255,255,255,0.6);
     border:1px solid var(--gold);
     border-radius:10px;
-    padding:3.5mm 5mm;
-    font-size:10.3px; line-height:1.6;
+    padding:2.3mm 5mm;
+    font-size:9.5px; line-height:1.45;
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.06);
   }
   .organizer b{ color:var(--green-dk); }
@@ -290,9 +291,9 @@
 
   /* ===== DATE ===== */
   .date-bar{
-    margin:0 16mm 6mm; display:flex; align-items:center; gap:4mm;
+    margin:0 16mm 3.5mm; display:flex; align-items:center; gap:4mm;
     background:linear-gradient(180deg, var(--green-lt), var(--green-dk));
-    color:#fff; border-radius:10px; padding:3.5mm 6mm;
+    color:#fff; border-radius:10px; padding:2.5mm 6mm;
     box-shadow:
       inset 0 2px 0 rgba(255,255,255,0.3),
       inset 0 -5px 8px rgba(0,0,0,0.35),
@@ -302,34 +303,34 @@
   .date-bar .d-blank{ flex:1; border-bottom:2px dotted var(--gold-lt); height:6mm; }
 
   /* ===== CONTACT ===== */
-  .contact{ margin:0 16mm 5mm; display:flex; gap:5mm; justify-content:center; font-size:10.3px; }
+  .contact{ margin:0 16mm 3mm; display:flex; gap:5mm; justify-content:center; font-size:9.8px; }
   .contact-item{
     display:flex; align-items:center; gap:2mm;
     background:linear-gradient(180deg,#fff,#f2e6c4);
-    border:1.4px solid var(--gold-dk); border-radius:24px; padding:2mm 5mm; font-weight:800;
+    border:1.4px solid var(--gold-dk); border-radius:24px; padding:1.6mm 5mm; font-weight:800;
     box-shadow:inset 0 1px 0 rgba(255,255,255,0.7), 0 2px 4px rgba(0,0,0,0.2);
   }
   .contact-item .name{ color:var(--maroon); font-weight:700; }
   .bkash-badge{ background:linear-gradient(180deg,#ff4fa0,#e2136e); color:#fff; font-size:8px; font-weight:800; padding:0.6mm 2mm; border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,0.4);}
 
   /* ===== SPONSORS ===== */
-  .sponsor-wrap{ margin:auto 16mm 0; padding-top:4mm; border-top:2px dashed var(--gold-dk); }
+  .sponsor-wrap{ margin:0 16mm 0; padding-top:2mm; padding-bottom:2mm; border-top:2px dashed var(--gold-dk); }
   .sponsor-ribbon{
     position:relative;
-    text-align:center; font-weight:800; font-size:10.5px; color:#fff;
+    text-align:center; font-weight:800; font-size:10px; color:#fff;
     letter-spacing:0.15em;
     background:linear-gradient(160deg,var(--maroon-lt),var(--maroon) 70%,#3a0a13);
-    padding:1.8mm 0; margin:0 auto 4mm; width:56mm;
+    padding:1.5mm 0; margin:0 auto 2.5mm; width:52mm;
     clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);
     box-shadow:0 3px 6px rgba(0,0,0,0.35);
   }
-  .sponsor-row{ display:flex; justify-content:center; gap:6mm; margin-bottom:5mm; }
+  .sponsor-row{ display:flex; justify-content:center; gap:5mm; margin-bottom:2.5mm; }
   .sponsor-slot{
-    width:44mm; height:22mm;
+    width:40mm; height:16mm;
     background:linear-gradient(180deg,#fff,#f4ecd2);
     border:1.6px solid var(--gold-dk); border-radius:8px;
     display:flex; align-items:center; justify-content:center;
-    font-size:7.8px; color:#8a7a54; text-align:center; font-weight:700; line-height:1.3; padding:2mm;
+    font-size:7.8px; color:#8a7a54; text-align:center; font-weight:700; line-height:1.3; padding:1.5mm;
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.2);
     overflow:hidden;
   }
@@ -339,8 +340,8 @@
   .footer{
     position:relative;
     background:linear-gradient(160deg, var(--maroon-lt), var(--maroon) 55%, #3a0a13);
-    color:var(--gold-lt); text-align:center; padding:4mm 10mm;
-    font-size:9.8px; font-weight:800; letter-spacing:0.02em;
+    color:var(--gold-lt); text-align:center; padding:2.5mm 10mm;
+    font-size:9px; font-weight:800; letter-spacing:0.02em;
     box-shadow:inset 0 3px 0 rgba(255,255,255,0.25), inset 0 -4px 8px rgba(0,0,0,0.4);
     border-top:2px solid var(--gold-dk);
   }
@@ -370,7 +371,6 @@
 
     <div class="center-emblem">
       <div class="ball3d" ></div>
-      <div class="vs-text"><b>১৬ দল •</b> নকআউট</div>
     </div>
 
     <div class="portrait-card">
@@ -423,6 +423,7 @@
   <div class="date-bar">
     <div class="d-lbl">📅 তারিখ:</div>
     <div class="d-blank"></div>
+    
   </div>
 
   <div class="contact">
@@ -433,9 +434,9 @@
   <div class="sponsor-wrap">
     <div class="sponsor-ribbon">স্পন্সর</div>
     <div class="sponsor-row">
-      <div class="sponsor-slot"><img src="image/atma.png" alt="auto"></div>
-      <div class="sponsor-slot"><img src="image/mondol.png" alt="Model Sports Alamdanga"></div>
-      <div class="sponsor-slot"><img src="image/moni.png" alt=""></div>
+      <div class="sponsor-slot"><img src="image/atma.png" alt="আত্মা" onerror="this.style.display='none'; this.parentElement.textContent=this.alt;"></div>
+      <div class="sponsor-slot"><img src="image/mondol.png" alt="Model Sports Alamdanga" onerror="this.style.display='none'; this.parentElement.textContent=this.alt;"></div>
+      <div class="sponsor-slot"><img src="image/moni.png" alt="মনি" onerror="this.style.display='none'; this.parentElement.textContent=this.alt;"></div>
     </div>
   </div>
 
