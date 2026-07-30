@@ -2,6 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>বেগম খালেদা জিয়া স্মৃতি গোল্ডকাপ ফুটবল টুর্নামেন্ট ২০২৬</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;600;700;800;900&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Cinzel:wght@700;900&display=swap" rel="stylesheet">
@@ -21,7 +22,7 @@
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
-    background:#39352b;
+    background:#2b2923;
     font-family:'Noto Sans Bengali',sans-serif;
     color:var(--ink);
   }
@@ -42,7 +43,6 @@
       0 18px 45px rgba(0,0,0,0.55);
   }
 
-  /* corner metallic studs */
   .stud{
     position:absolute;
     width:9mm;height:9mm;
@@ -56,7 +56,6 @@
   .stud.bl{bottom:8mm; left:8mm;}
   .stud.br{bottom:8mm; right:8mm;}
 
-  
   .header{
     position:relative;
     margin:5mm 11mm 0;
@@ -150,8 +149,6 @@
     border-radius:50%;
     padding:0;
     background:conic-gradient(from 200deg, #d3b118, var(--gold) 25%, var(--gold-dk) 50%, var(--gold) 75%, #fff6d0 100%);
-  
-
   }
   .medallion-inner{
     width:100%; height:100%;
@@ -181,19 +178,162 @@
   }
   .portrait-sub{ font-size:8px; color:var(--maroon); font-weight:700; margin-top:0.5mm; }
 
-  .center-emblem{ display:flex; flex-direction:column; align-items:center; }
-  .ball3d{
-    width:16mm; height:16mm; border-radius:50%;
-    background:radial-gradient(circle at 32% 28%, #ffffff, #e7e7e7 55%, #a9a9a9 100%);
-    box-shadow:
-      inset -3px -3px 6px rgba(0,0,0,0.35),
-      inset 2px 2px 4px rgba(255,255,255,0.8),
-      0 5px 8px rgba(0,0,0,0.4);
-    position:relative;
+  /* ===== GIF TYPE ANIMATED PLAYER & FOOTBALL ===== */
+  .center-emblem{ 
+    display:flex; 
+    flex-direction:column; 
+    align-items:center; 
+    justify-content:center;
   }
-  .d-teams{
-    font-family:'Cinzel', serif; font-size:9px; letter-spacing:0.1em;
-    color:var(--gold-lt); font-weight:800; white-space:nowrap;
+
+  .stadium-circle-3d {
+    width: 38mm;
+    height: 38mm;
+    border-radius: 50%;
+    position: relative;
+    background: 
+      radial-gradient(circle at 50% 15%, #ffffff 0%, rgba(46, 139, 87, 0.85) 35%, #02120b 95%);
+    border: 3.5px solid var(--gold-lt);
+    box-shadow: 
+      0 0 22px rgba(217, 166, 59, 0.85),
+      0 0 12px rgba(11, 93, 59, 0.8),
+      inset 0 0 20px rgba(0,0,0,0.9);
+    overflow: hidden;
+  }
+
+  /* 3D Grass Perspective Turf */
+  .stadium-circle-3d::after {
+    content:'';
+    position:absolute;
+    bottom:-5%; left:-20%; width:140%; height:48%;
+    background: repeating-linear-gradient(
+      0deg,
+      #06331e,
+      #06331e 4px,
+      #0a4a2c 4px,
+      #0a4a2c 9px
+    );
+    transform: perspective(60px) rotateX(25deg);
+    opacity:0.9;
+    box-shadow: 0 -6px 12px rgba(0,0,0,0.7);
+  }
+
+  /* SVG Player Container with Sprint Animation */
+  .player-svg-container {
+    position: absolute;
+    bottom: 2mm;
+    left: 1.5mm;
+    width: 32mm;
+    height: 32mm;
+    z-index: 3;
+    filter: drop-shadow(-4px 5px 6px rgba(0,0,0,0.85));
+    animation: playerRun 0.8s infinite alternate ease-in-out;
+  }
+
+  /* Animated Striking Boot Leg */
+  .kicking-leg {
+    transform-origin: 42px 49px;
+    animation: kickBall 0.8s infinite alternate ease-in-out;
+  }
+
+  /* KEYFRAMES FOR ANIMATIONS (GIF EFFECT) */
+  @keyframes playerRun {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-2px) rotate(2deg); }
+  }
+
+  @keyframes kickBall {
+    0% { transform: rotate(-5deg); }
+    100% { transform: rotate(18deg); }
+  }
+
+  /* Animated Ball Dribble & Spin */
+  .ball-3d-dribble {
+    position: absolute;
+    bottom: 3.5mm;
+    right: 3.5mm;
+    width: 10.5mm;
+    height: 10.5mm;
+    border-radius: 50%;
+    z-index: 4;
+    background: 
+      radial-gradient(circle at 35% 25%, #ffffff 0%, #d8d8d8 45%, #111111 95%);
+    box-shadow: 
+      0 0 10px rgba(255, 235, 130, 0.9),
+      -3px 4px 6px rgba(0,0,0,0.85);
+    animation: ballBounce 0.8s infinite alternate ease-in-out;
+  }
+
+  .ball-3d-dribble::after {
+    content:'';
+    position:absolute;
+    top:0; left:0; width:100%; height:100%;
+    border-radius:50%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,22 65,36 58,56 42,56 35,36' fill='%23111111'/%3E%3Cpolygon points='20,15 35,22 28,40 10,32' fill='%23111111'/%3E%3Cpolygon points='80,15 90,32 72,40 65,22' fill='%23111111'/%3E%3Cpolygon points='50,85 68,72 60,56 40,56 32,72' fill='%23111111'/%3E%3C/svg%3E") no-repeat center/cover;
+    opacity: 0.9;
+    animation: ballSpin 1.2s infinite linear;
+  }
+
+  @keyframes ballBounce {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(4px, -5px) scale(1.05); }
+  }
+
+  @keyframes ballSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Dynamic Arc Line Glow Pulse */
+  .ball-action-arc {
+    position: absolute;
+    bottom: 5mm;
+    right: 8mm;
+    width: 16mm;
+    height: 10mm;
+    border-bottom: 2.5px solid rgba(255, 230, 110, 0.95);
+    border-right: 2px solid rgba(255, 120, 0, 0.7);
+    border-radius: 50%;
+    transform: rotate(-15deg);
+    z-index: 3;
+    filter: drop-shadow(0 0 4px #ffcc00);
+    animation: arcPulse 0.8s infinite alternate;
+  }
+
+  @keyframes arcPulse {
+    0% { opacity: 0.3; transform: scale(0.9) rotate(-15deg); }
+    100% { opacity: 1; transform: scale(1.1) rotate(-15deg); }
+  }
+
+  /* Ground Motion Dust Particles */
+  .turf-dust {
+    position: absolute;
+    bottom: 3mm;
+    left: 8mm;
+    width: 12mm;
+    height: 3mm;
+    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 80%);
+    z-index: 2;
+    filter: blur(1px);
+    animation: dustFade 0.8s infinite alternate;
+  }
+
+  @keyframes dustFade {
+    0% { opacity: 0.2; transform: scaleX(0.8); }
+    100% { opacity: 0.8; transform: scaleX(1.3); }
+  }
+
+  /* Ground Shadow under Ball & Player */
+  .action-shadow {
+    position: absolute;
+    bottom: 1.5mm;
+    left: 6mm;
+    width: 25mm;
+    height: 3.5mm;
+    background: rgba(0,0,0,0.8);
+    border-radius: 50%;
+    filter: blur(2.5px);
+    z-index: 2;
   }
 
   /* ===== INTRO ===== */
@@ -208,7 +348,6 @@
   }
   .intro .salam{ font-weight:800; color:var(--green-dk); display:block; margin-bottom:1mm; font-size:11px; }
   .intro .quote{ color:var(--maroon); font-weight:800; }
-
 
   .section-title{
     display:flex; align-items:center; gap:3mm;
@@ -313,8 +452,14 @@
   .contact-item .name{ color:var(--maroon); font-weight:700; }
   .bkash-badge{ background:linear-gradient(180deg,#ff4fa0,#e2136e); color:#fff; font-size:8px; font-weight:800; padding:0.6mm 2mm; border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,0.4);}
 
-  /* ===== SPONSORS ===== */
-  .sponsor-wrap{ margin:0 16mm 0; padding-top:2mm; padding-bottom:2mm; border-top:2px dashed var(--gold-dk); }
+  /* ===== SPONSORS SECTION ===== */
+  .sponsor-wrap{ 
+    margin:0 16mm 3mm; 
+    padding-top:2.5mm; 
+    padding-bottom:2.5mm; 
+    border-top:2px dashed var(--gold-dk); 
+    display:block; 
+  }
   .sponsor-ribbon{
     position:relative;
     text-align:center; font-weight:800; font-size:10px; color:#fff;
@@ -324,17 +469,31 @@
     clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);
     box-shadow:0 3px 6px rgba(0,0,0,0.35);
   }
-  .sponsor-row{ display:flex; justify-content:center; gap:5mm; margin-bottom:2.5mm; }
+  .sponsor-row{ 
+    display:flex; 
+    justify-content:center; 
+    align-items:center;
+    gap:5mm; 
+  }
   .sponsor-slot{
-    width:40mm; height:16mm;
-    background:linear-gradient(180deg,#fff,#f4ecd2);
-    border:1.6px solid var(--gold-dk); border-radius:8px;
-    display:flex; align-items:center; justify-content:center;
-    font-size:7.8px; color:#8a7a54; text-align:center; font-weight:700; line-height:1.3; padding:1.5mm;
+    width:42mm; 
+    height:16mm;
+    background:linear-gradient(180deg,#ffffff,#f4ecd2);
+    border:1.6px solid var(--gold-dk); 
+    border-radius:8px;
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    padding:1.5mm;
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.2);
     overflow:hidden;
   }
-  .sponsor-slot img{ max-width:100%; max-height:100%; object-fit:contain; }
+  .sponsor-slot img{ 
+    max-width:100%; 
+    max-height:100%; 
+    object-fit:contain;
+    display:block;
+  }
 
   /* ===== FOOTER RIBBON ===== */
   .footer{
@@ -364,13 +523,50 @@
 
   <div class="portraits">
     <div class="portrait-card">
-      <div class="medallion"><div class="medallion-inner placeholder"><img src="image/ziab.png" alt=""></div></div>
+      <div class="medallion"><div class="medallion-inner placeholder"><img src="image/ziab.png" alt="খালেda জিয়া"></div></div>
       <div class="portrait-label">বেগম খালেদা জিয়া</div>
       <div class="portrait-sub">স্মরণে</div>
     </div>
 
+    <!-- ===== ANIMATED PLAYER & BALL (GIF TYPE) ===== -->
     <div class="center-emblem">
-      <div class="ball3d" ></div>
+      <div class="stadium-circle-3d">
+        <div class="turf-dust"></div>
+        <div class="action-shadow"></div>
+
+        <!-- Glowing Motion Trail -->
+        <div class="ball-action-arc"></div>
+
+        <!-- Animated SVG Player (Sprint & Kick) -->
+        <svg class="player-svg-container" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head -->
+          <circle cx="30" cy="22" r="7.5" fill="#111111"/>
+          <!-- Hair & Face Angle -->
+          <path d="M25 18 C28 14, 35 14, 37 19 C34 18, 29 18, 25 18Z" fill="#ffcc99"/>
+          
+          <!-- Jersey -->
+          <path d="M22 29 L42 26 L48 50 L26 53 Z" fill="#b23348"/>
+          <path d="M30 28 L42 26 L44 42 L32 40Z" fill="#7a1526"/>
+
+          <!-- Left Arm -->
+          <path d="M22 30 L8 38 L11 43 L23 37 Z" fill="#ffcc99"/>
+          <!-- Right Arm -->
+          <path d="M40 28 L56 36 L53 41 L38 34 Z" fill="#ffcc99"/>
+
+          <!-- Back Leg -->
+          <path d="M26 52 L12 68 L5 78 L12 80 L18 72 L32 54 Z" fill="#0b5d3b"/>
+          <path d="M5 78 L0 86 L9 87 L12 80 Z" fill="#ffffff"/>
+
+          <!-- Animated Kicking Leg Group -->
+          <g class="kicking-leg">
+            <path d="M42 49 L58 64 L72 74 L66 80 L50 68 L36 53 Z" fill="#0b5d3b"/>
+            <path d="M72 74 L80 77 L78 85 L66 80 Z" fill="#d9a63b"/>
+          </g>
+        </svg>
+
+        <!-- Animated Bouncing & Spinning Football -->
+        <div class="ball-3d-dribble"></div>
+      </div>
     </div>
 
     <div class="portrait-card">
@@ -423,16 +619,6 @@
   <div class="date-bar">
     <div class="d-lbl">📅 তারিখ:</div>
     <div class="d-blank"></div>
-    
-  </div>
-
-  <div class="sponsor-wrap">
-    <div class="sponsor-ribbon">স্পন্সর</div>
-    <div class="sponsor-row">
-      <div class="sponsor-slot"><img src="image/atma.png" alt="আত্মা" onerror="this.style.display='none'; this.parentElement.textContent=this.alt;"></div>
-      <div class="sponsor-slot"><img src="image/mondol.png" alt="Model Sports Alamdanga" onerror="this.style.display='none'; this.parentElement.textContent=this.alt;"></div>
-      <div class="sponsor-slot"><img src="image/moni.png" alt="মনি" onerror="this.style.display='none'; this.parentElement.textContent=this.alt;"></div>
-    </div>
   </div>
 
   <div class="contact">
@@ -440,7 +626,20 @@
     <div class="contact-item">📞 ০১৯৬৭২৪৬৯০৯ <span class="name">(সবুজ)</span></div>
   </div>
 
-  
+  <div class="sponsor-wrap">
+    <div class="sponsor-ribbon">স্পন্সর</div>
+    <div class="sponsor-row">
+      <div class="sponsor-slot">
+        <img src="image/atma.png" alt="Sponsor Logo">
+      </div>
+      <div class="sponsor-slot">
+        <img src="image/mondol.png" alt="Sponsor Logo">
+      </div>
+      <div class="sponsor-slot">
+        <img src="image/moni.png" alt="Sponsor Logo">
+      </div>
+    </div>
+  </div>
 
   <div class="footer">এসো আলোর পথে, এসো সুন্দরের পথে, অন্যের সেবায় নিজেকে নিয়োজিত রাখি — নাগদাহ অনির্বাণ সংঘ</div>
 </div>
