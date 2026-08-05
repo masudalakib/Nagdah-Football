@@ -25,6 +25,7 @@
     background:#2b2923;
     font-family:'Noto Sans Bengali',sans-serif;
     color:var(--ink);
+    font-size: 16px;
   }
   .page{
     width:210mm;
@@ -59,7 +60,7 @@
   .header{
     position:relative;
     margin:5mm 11mm 0;
-    padding:4mm 10mm 4.5mm;
+    padding:6mm 10mm 6mm;
     text-align:center;
     background:
       linear-gradient(180deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0) 30%),
@@ -79,32 +80,38 @@
     pointer-events:none;
   }
   .eyebrow{
-    font-family:'Cinzel', serif;
-    letter-spacing:0.32em;
-    font-size:9.5px;
+    font-family:'Noto Serif Bengali', serif;
+    font-weight:700;
+    letter-spacing:0.12em;
+    font-size:16px;
     color:var(--gold-lt);
-    text-shadow:0 1px 1px rgba(0,0,0,0.6);
+    text-shadow:0 1px 2px rgba(0,0,0,0.8);
   }
   .title-bn{
     font-family:'Noto Serif Bengali', serif;
-    font-weight:800;
-    font-size:21px;
-    line-height:1.3;
+    font-weight:900;
+    font-size:26px;
+    line-height:1.35;
     color:#fefbe8;
-    margin-top:1mm;
+    margin-top:2mm;
     text-shadow:
       0 1px 0 rgba(255,255,255,0.35),
-      0 2px 3px rgba(0,0,0,0.55),
-      0 5px 10px rgba(0,0,0,0.4);
+      0 2px 4px rgba(0,0,0,0.6),
+      0 6px 12px rgba(0,0,0,0.4);
   }
-  .title-bn .accent{ color:var(--gold-lt); }
+  .title-bn .accent{ 
+    color:var(--gold-lt); 
+    font-size:32px;
+    display:inline-block;
+    margin-top:1mm;
+  }
 
   .year-medal{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    width:28mm; height:10.5mm;
-    margin-top:1.5mm;
+    width:34mm; height:13mm;
+    margin-top:2mm;
     background:radial-gradient(ellipse at 40% 25%, #fff6d0, var(--gold) 55%, var(--gold-dk) 100%);
     border-radius:10px;
     border:1.5px solid #6e4c0f;
@@ -116,24 +123,24 @@
   .year-medal span{
     font-family:'Cinzel', serif;
     font-weight:900;
-    font-size:19px;
+    font-size:24px;
     letter-spacing:0.05em;
     color:#4a2f05;
     text-shadow:0 1px 0 rgba(255,255,255,0.6);
   }
 
   .venue-line{
-    margin-top:2mm;
-    font-size:11px;
+    margin-top:2.5mm;
+    font-size:15px;
     font-weight:700;
     color:var(--cream);
     display:inline-flex;
     align-items:center;
     gap:2mm;
-    background:linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.35));
-    padding:1.5mm 5mm;
+    background:linear-gradient(180deg, rgba(0,0,0,0.15), rgba(0,0,0,0.45));
+    padding:2mm 7mm;
     border-radius:30px;
-    border:1px solid rgba(255,255,255,0.3);
+    border:1px solid rgba(255,255,255,0.35);
     box-shadow:inset 0 1px 2px rgba(255,255,255,0.2);
   }
 
@@ -141,11 +148,11 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:3mm 16mm 1.5mm;
+    padding:4mm 16mm 2mm;
   }
-  .portrait-card{ display:flex; flex-direction:column; align-items:center; width:38mm; }
+  .portrait-card{ display:flex; flex-direction:column; align-items:center; width:45mm; }
   .medallion{
-    width:28mm; height:28mm;
+    width:32mm; height:32mm;
     border-radius:50%;
     padding:0;
     background:conic-gradient(from 200deg, #d3b118, var(--gold) 25%, var(--gold-dk) 50%, var(--gold) 75%, #fff6d0 100%);
@@ -164,21 +171,21 @@
     object-fit:cover;
   }
   .medallion-inner.placeholder{
-    font-size:8px; color:#9a814a; font-weight:700; text-align:center; padding:2mm; line-height:1.35;
+    font-size:10px; color:#9a814a; font-weight:700; text-align:center; padding:2mm; line-height:1.35;
     background:repeating-linear-gradient(45deg,#f1e4bd 0 6px,#faf2da 6px 12px);
   }
   .portrait-label{
-    margin-top:1.5mm;
+    margin-top:2mm;
     font-family:'Noto Serif Bengali', serif;
     font-weight:800;
-    font-size:10px;
+    font-size:15px;
     color:var(--green-dk);
     text-align:center;
     text-shadow:0 1px 0 rgba(255,255,255,0.6);
   }
-  .portrait-sub{ font-size:8px; color:var(--maroon); font-weight:700; margin-top:0.5mm; }
+  .portrait-sub{ font-size:12px; color:var(--maroon); font-weight:800; margin-top:0.5mm; }
 
-  /* ===== GIF TYPE ANIMATED PLAYER & FOOTBALL ===== */
+  /* ===== ANIMATED PLAYER & FOOTBALL ===== */
   .center-emblem{ 
     display:flex; 
     flex-direction:column; 
@@ -187,8 +194,8 @@
   }
 
   .stadium-circle-3d {
-    width: 38mm;
-    height: 38mm;
+    width: 42mm;
+    height: 42mm;
     border-radius: 50%;
     position: relative;
     background: 
@@ -201,7 +208,6 @@
     overflow: hidden;
   }
 
-  /* 3D Grass Perspective Turf */
   .stadium-circle-3d::after {
     content:'';
     position:absolute;
@@ -218,25 +224,22 @@
     box-shadow: 0 -6px 12px rgba(0,0,0,0.7);
   }
 
-  /* SVG Player Container with Sprint Animation */
   .player-svg-container {
     position: absolute;
     bottom: 2mm;
     left: 1.5mm;
-    width: 32mm;
-    height: 32mm;
+    width: 36mm;
+    height: 36mm;
     z-index: 3;
     filter: drop-shadow(-4px 5px 6px rgba(0,0,0,0.85));
     animation: playerRun 0.8s infinite alternate ease-in-out;
   }
 
-  /* Animated Striking Boot Leg */
   .kicking-leg {
     transform-origin: 42px 49px;
     animation: kickBall 0.8s infinite alternate ease-in-out;
   }
 
-  /* KEYFRAMES FOR ANIMATIONS (GIF EFFECT) */
   @keyframes playerRun {
     0% { transform: translateY(0px) rotate(0deg); }
     100% { transform: translateY(-2px) rotate(2deg); }
@@ -247,13 +250,12 @@
     100% { transform: rotate(18deg); }
   }
 
-  /* Animated Ball Dribble & Spin */
   .ball-3d-dribble {
     position: absolute;
     bottom: 3.5mm;
     right: 3.5mm;
-    width: 10.5mm;
-    height: 10.5mm;
+    width: 12mm;
+    height: 12mm;
     border-radius: 50%;
     z-index: 4;
     background: 
@@ -284,13 +286,12 @@
     100% { transform: rotate(360deg); }
   }
 
-  /* Dynamic Arc Line Glow Pulse */
   .ball-action-arc {
     position: absolute;
     bottom: 5mm;
     right: 8mm;
-    width: 16mm;
-    height: 10mm;
+    width: 18mm;
+    height: 12mm;
     border-bottom: 2.5px solid rgba(255, 230, 110, 0.95);
     border-right: 2px solid rgba(255, 120, 0, 0.7);
     border-radius: 50%;
@@ -305,13 +306,12 @@
     100% { opacity: 1; transform: scale(1.1) rotate(-15deg); }
   }
 
-  /* Ground Motion Dust Particles */
   .turf-dust {
     position: absolute;
     bottom: 3mm;
     left: 8mm;
-    width: 12mm;
-    height: 3mm;
+    width: 14mm;
+    height: 4mm;
     background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, transparent 80%);
     z-index: 2;
     filter: blur(1px);
@@ -323,13 +323,12 @@
     100% { opacity: 0.8; transform: scaleX(1.3); }
   }
 
-  /* Ground Shadow under Ball & Player */
   .action-shadow {
     position: absolute;
     bottom: 1.5mm;
     left: 6mm;
-    width: 25mm;
-    height: 3.5mm;
+    width: 28mm;
+    height: 4mm;
     background: rgba(0,0,0,0.8);
     border-radius: 50%;
     filter: blur(2.5px);
@@ -338,17 +337,18 @@
 
   /* ===== INTRO ===== */
   .intro{
-    margin:1mm 16mm 0;
-    padding:3mm 5mm;
-    font-size:10px; line-height:1.55; text-align:justify;
-    background:rgba(255,255,255,0.55);
-    border-radius:8px;
-    border:1px solid var(--gold);
+    margin:2mm 16mm 0;
+    padding:4mm 6mm;
+    font-size:14px; line-height:1.6; text-align:justify;
+    background:rgba(255,255,255,0.75);
+    border-radius:10px;
+    border:1.5px solid var(--gold);
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.06);
   }
-  .intro .salam{ font-weight:800; color:var(--green-dk); display:block; margin-bottom:1mm; font-size:11px; }
-  .intro .quote{ color:var(--maroon); font-weight:800; }
+  .intro .salam{ font-weight:800; color:var(--green-dk); display:block; margin-bottom:1mm; font-size:16px; }
+  .intro .quote{ color:var(--maroon); font-weight:800; font-size:15px; }
 
+  /* Section Title */
   .section-title{
     display:flex; align-items:center; gap:3mm;
     margin:3mm 16mm 2mm;
@@ -365,13 +365,38 @@
     text-shadow:0 1px 2px rgba(0,0,0,0.5);
   }
 
-  /* ===== RULES ===== */
-  .rules{ margin:0 16mm 3mm; display:flex; flex-direction:column; gap:1.5mm; }
-  .rule-item{ display:flex; gap:3mm; align-items:flex-start; font-size:9.8px; line-height:1.4; }
+  /* ===== RULES (25px Text) ===== */
+  .rules{ margin:0 16mm 4mm; display:flex; flex-direction:column; gap:3.5mm; }
+  .rule-item{ 
+    display:flex; 
+    gap:4mm; 
+    align-items:center; 
+    background: rgba(255, 255, 255, 0.6);
+    padding: 3mm 4mm;
+    border-radius: 10px;
+    border-left: 4px solid var(--green-dk);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .rule-item h2{
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0;
+    color: var(--ink);
+    font-family: 'Noto Serif Bengali', serif;
+    letter-spacing: 0.01em;
+  }
+
+  .rule-item h2 b{
+    color: var(--maroon);
+    font-weight: 900;
+  }
+
   .rule-num{
-    flex:0 0 auto; width:5.5mm; height:5.5mm; border-radius:50%;
+    flex:0 0 auto; width:10mm; height:10mm; border-radius:50%;
     display:flex; align-items:center; justify-content:center;
-    color:#fff; font-weight:800; font-size:9px; font-family:'Cinzel',serif;
+    color:#fff; font-weight:800; font-size:18px; font-family:'Cinzel',serif;
     box-shadow:
       inset 0 2px 0 rgba(255,255,255,0.5),
       inset 0 -3px 5px rgba(0,0,0,0.4),
@@ -383,89 +408,167 @@
   .rule-item:nth-child(4) .rule-num{background:var(--green-dk);}
   .rule-item:nth-child(5) .rule-num{background:#5a3d0f;}
 
-  /* ===== FEE + PRIZES ===== */
-  .highlight-row{ display:flex; gap:4mm; margin:1mm 16mm 3.5mm; }
+  /* ===== NEW FEE + PRIZES STYLING (NUMBERS SET TO 25PX) ===== */
+  .highlight-row{ display:flex; gap:4mm; margin:2mm 16mm 4mm; }
+  
   .fee-box{
-    flex:0 0 38mm;
-    background:linear-gradient(160deg, var(--maroon-lt), var(--maroon) 60%, #4c0f1b);
-    color:#fff; border-radius:12px; padding:2.5mm 3mm;
+    flex:0 0 45mm;
+    background: linear-gradient(135deg, var(--maroon-lt) 0%, var(--maroon) 100%);
+    color:#fff; border-radius:14px; padding:3.5mm 4mm;
     text-align:center; display:flex; flex-direction:column; justify-content:center;
     box-shadow:
-      inset 0 2px 0 rgba(255,255,255,0.3),
-      inset 0 -5px 10px rgba(0,0,0,0.4),
-      0 6px 10px rgba(0,0,0,0.4);
-    border:1px solid #3a0a13;
+      0 8px 16px rgba(122, 21, 38, 0.25),
+      inset 0 2px 0 rgba(255,255,255,0.3);
+    border:2px solid var(--gold);
+    position:relative;
+    overflow:hidden;
   }
-  .fee-box .lbl{font-size:9.5px; font-weight:800; opacity:0.9;}
-  .fee-box .amt{font-size:15px; font-weight:900; margin-top:1mm; font-family:'Noto Serif Bengali',serif;}
+
+  .fee-box::before {
+    content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+    pointer-events:none;
+  }
+
+  .fee-box .lbl{
+    font-size:13px; font-weight:800; 
+    color: var(--gold-lt);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .fee-box .amt{
+    font-size:25px; /* Set to 25px */
+    font-weight:900; 
+    margin-top:1.5mm; 
+    font-family:'Noto Serif Bengali',serif;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+  }
 
   .prizes{ flex:1; display:flex; gap:4mm; }
-  .prize-card{
-    flex:1; border-radius:12px; padding:2.3mm 3mm; text-align:center; position:relative;
-    box-shadow:
-      inset 0 2px 0 rgba(255,255,255,0.5),
-      inset 0 -6px 10px rgba(0,0,0,0.3),
-      0 6px 10px rgba(0,0,0,0.35);
-    border:1px solid rgba(0,0,0,0.25);
-  }
-  .prize-card.gold{ background:radial-gradient(ellipse at 40% 20%, #fff3cf, var(--gold) 55%, var(--gold-dk) 100%); color:#3a2704; }
-  .prize-card.silver{ background:radial-gradient(ellipse at 40% 20%, #ffffff, #c7ccd1 55%, #7d858b 100%); color:#26313a; }
-  .prize-medal{ font-size:19px; filter:drop-shadow(0 2px 2px rgba(0,0,0,0.4)); }
-  .prize-card .p-lbl{ font-size:9.5px; font-weight:800; margin-top:1mm; }
-  .prize-card .p-amt{ font-size:13.5px; font-weight:900; margin-top:1mm; font-family:'Noto Serif Bengali',serif;}
-  .prize-card .p-words{ font-size:7.8px; font-weight:700; opacity:0.85; }
 
-  /* ===== ORGANIZER ===== */
-  .organizer{
-    margin:0 16mm 3mm;
-    background:rgba(255,255,255,0.6);
-    border:1px solid var(--gold);
-    border-radius:10px;
-    padding:2.3mm 5mm;
-    font-size:9.5px; line-height:1.45;
-    box-shadow:inset 0 1px 3px rgba(0,0,0,0.06);
+  .prize-card{
+    flex:1; border-radius:14px; padding:3mm 4mm; text-align:center; position:relative;
+    box-shadow:
+      0 8px 16px rgba(0,0,0,0.12),
+      inset 0 2px 0 rgba(255,255,255,0.8);
+    border:2px solid var(--gold);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
   }
-  .organizer b{ color:var(--green-dk); }
-  .organizer .line2{ margin-top:1.5mm; font-weight:800; color:var(--maroon); }
+
+  .prize-card.gold{ 
+    background: linear-gradient(145deg, #fffbee 0%, #fceabb 50%, #fccd4d 100%); 
+    color:#3a2704; 
+  }
+
+  .prize-card.silver{ 
+    background: linear-gradient(145deg, #ffffff 0%, #e6e9f0 50%, #eef1f5 100%); 
+    color:#26313a; 
+    border-color: #a1a8b0;
+  }
+
+  .prize-header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2mm;
+  }
+
+  .prize-medal{ font-size:22px; filter:drop-shadow(0 2px 2px rgba(0,0,0,0.2)); }
+
+  .prize-card .p-lbl{ 
+    font-size:13px; 
+    font-weight:800; 
+    font-family:'Noto Serif Bengali',serif;
+  }
+
+  .prize-card .p-amt{ 
+    font-size:25px; /* Set to 25px */
+    font-weight:900; 
+    margin-top:1mm; 
+    font-family:'Noto Serif Bengali',serif;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+  }
+
+  .prize-card.gold .p-amt { color: var(--maroon); }
+  .prize-card.silver .p-amt { color: var(--green-dk); }
+
+  .prize-card .p-words{ 
+    font-size:10px; 
+    font-weight:700; 
+    opacity:0.85; 
+    margin-top:0.5mm;
+  }
+
+  /* ===== ORGANIZER SECTION (24px & CENTERED) ===== */
+  .organizer{
+    margin:0 16mm 4mm;
+    background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(253, 246, 226, 0.98));
+    border:2px solid var(--gold-dk);
+    border-radius:12px;
+    padding:5mm 6mm;
+    text-align: center;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1), inset 0 1px 3px rgba(255,255,255,0.8);
+  }
+  .organizer .line1{ 
+    font-size:24px; 
+    font-weight:800;
+    line-height:1.4;
+    color:var(--ink);
+    font-family:'Noto Serif Bengali', serif;
+  }
+  .organizer .line1 b{ color:var(--green-dk); font-weight:900; }
+  .organizer .line2{ 
+    margin-top:3mm; 
+    font-size:24px; 
+    font-weight:800; 
+    line-height:1.4;
+    color:var(--maroon); 
+    font-family:'Noto Serif Bengali', serif;
+  }
 
   /* ===== DATE ===== */
   .date-bar{
-    margin:0 16mm 3.5mm; display:flex; align-items:center; gap:4mm;
+    margin:0 16mm 4mm; display:flex; align-items:center; gap:4mm;
     background:linear-gradient(180deg, var(--green-lt), var(--green-dk));
-    color:#fff; border-radius:10px; padding:2.5mm 6mm;
+    color:#fff; border-radius:10px; padding:3.5mm 8mm;
     box-shadow:
       inset 0 2px 0 rgba(255,255,255,0.3),
       inset 0 -5px 8px rgba(0,0,0,0.35),
       0 5px 8px rgba(0,0,0,0.3);
   }
-  .date-bar .d-lbl{ font-weight:800; font-size:12px; font-family:'Noto Serif Bengali',serif; color:var(--gold-lt); white-space:nowrap;}
-  .date-bar .d-blank{ flex:1; border-bottom:2px dotted var(--gold-lt); height:6mm; }
+  .date-bar .d-lbl{ font-weight:800; font-size:18px; font-family:'Noto Serif Bengali',serif; color:var(--gold-lt); white-space:nowrap;}
+  .date-bar .d-blank{ flex:1; border-bottom:2.5px dotted var(--gold-lt); height:6mm; }
 
   /* ===== CONTACT ===== */
-  .contact{ margin:0 16mm 3mm; display:flex; gap:5mm; justify-content:center; font-size:9.8px; }
+  .contact{ margin:0 16mm 4mm; display:flex; gap:6mm; justify-content:center; font-size:16px; }
   .contact-item{
-    display:flex; align-items:center; gap:2mm;
+    display:flex; align-items:center; gap:2.5mm;
     background:linear-gradient(180deg,#fff,#f2e6c4);
-    border:1.4px solid var(--gold-dk); border-radius:24px; padding:1.6mm 5mm; font-weight:800;
+    border:1.5px solid var(--gold-dk); border-radius:24px; padding:2.5mm 7mm; font-weight:800;
     box-shadow:inset 0 1px 0 rgba(255,255,255,0.7), 0 2px 4px rgba(0,0,0,0.2);
   }
-  .contact-item .name{ color:var(--maroon); font-weight:700; }
-  .bkash-badge{ background:linear-gradient(180deg,#ff4fa0,#e2136e); color:#fff; font-size:8px; font-weight:800; padding:0.6mm 2mm; border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,0.4);}
+  .contact-item .name{ color:var(--maroon); font-weight:800; }
+  .bkash-badge{ background:linear-gradient(180deg,#ff4fa0,#e2136e); color:#fff; font-size:11px; font-weight:800; padding:1mm 3.5mm; border-radius:4px; box-shadow:0 1px 2px rgba(0,0,0,0.4);}
 
   /* ===== SPONSORS SECTION ===== */
   .sponsor-wrap{ 
-    margin:0 16mm 3mm; 
-    padding-top:2.5mm; 
-    padding-bottom:2.5mm; 
+    margin:0 16mm 4mm; 
+    padding-top:3mm; 
+    padding-bottom:3mm; 
     border-top:2px dashed var(--gold-dk); 
     display:block; 
   }
   .sponsor-ribbon{
     position:relative;
-    text-align:center; font-weight:800; font-size:10px; color:#fff;
+    text-align:center; font-weight:800; font-size:14px; color:#fff;
     letter-spacing:0.15em;
     background:linear-gradient(160deg,var(--maroon-lt),var(--maroon) 70%,#3a0a13);
-    padding:1.5mm 0; margin:0 auto 2.5mm; width:52mm;
+    padding:2mm 0; margin:0 auto 3mm; width:60mm;
     clip-path:polygon(4% 0,96% 0,100% 50%,96% 100%,4% 100%,0 50%);
     box-shadow:0 3px 6px rgba(0,0,0,0.35);
   }
@@ -473,18 +576,18 @@
     display:flex; 
     justify-content:center; 
     align-items:center;
-    gap:5mm; 
+    gap:6mm; 
   }
   .sponsor-slot{
-    width:42mm; 
-    height:16mm;
+    width:48mm; 
+    height:18mm;
     background:linear-gradient(180deg,#ffffff,#f4ecd2);
     border:1.6px solid var(--gold-dk); 
     border-radius:8px;
     display:flex; 
     align-items:center; 
     justify-content:center;
-    padding:1.5mm;
+    padding:2mm;
     box-shadow:inset 0 1px 3px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.2);
     overflow:hidden;
   }
@@ -499,10 +602,11 @@
   .footer{
     position:relative;
     background:linear-gradient(160deg, var(--maroon-lt), var(--maroon) 55%, #3a0a13);
-    color:var(--gold-lt); text-align:center; padding:2.5mm 10mm;
-    font-size:9px; font-weight:800; letter-spacing:0.02em;
+    color:var(--gold-lt); text-align:center; padding:3.5mm 10mm;
+    font-size:13px; font-weight:800; letter-spacing:0.02em;
     box-shadow:inset 0 3px 0 rgba(255,255,255,0.25), inset 0 -4px 8px rgba(0,0,0,0.4);
     border-top:2px solid var(--gold-dk);
+    font-family:'Noto Serif Bengali', serif;
   }
 
   @media print{ body{background:none;} .page{margin:0;} }
@@ -523,48 +627,38 @@
 
   <div class="portraits">
     <div class="portrait-card">
-      <div class="medallion"><div class="medallion-inner placeholder"><img src="image/ziab.png" alt="খালেda জিয়া"></div></div>
+      <div class="medallion"><div class="medallion-inner placeholder"><img src="image/ziab.png" alt="খালেদা জিয়া"></div></div>
       <div class="portrait-label">বেগম খালেদা জিয়া</div>
       <div class="portrait-sub">স্মরণে</div>
     </div>
 
-    <!-- ===== ANIMATED PLAYER & BALL (GIF TYPE) ===== -->
+    <!-- ===== ANIMATED PLAYER & FOOTBALL ===== -->
     <div class="center-emblem">
       <div class="stadium-circle-3d">
         <div class="turf-dust"></div>
         <div class="action-shadow"></div>
 
-        <!-- Glowing Motion Trail -->
         <div class="ball-action-arc"></div>
 
-        <!-- Animated SVG Player (Sprint & Kick) -->
         <svg class="player-svg-container" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Head -->
           <circle cx="30" cy="22" r="7.5" fill="#111111"/>
-          <!-- Hair & Face Angle -->
           <path d="M25 18 C28 14, 35 14, 37 19 C34 18, 29 18, 25 18Z" fill="#ffcc99"/>
           
-          <!-- Jersey -->
           <path d="M22 29 L42 26 L48 50 L26 53 Z" fill="#b23348"/>
           <path d="M30 28 L42 26 L44 42 L32 40Z" fill="#7a1526"/>
 
-          <!-- Left Arm -->
           <path d="M22 30 L8 38 L11 43 L23 37 Z" fill="#ffcc99"/>
-          <!-- Right Arm -->
           <path d="M40 28 L56 36 L53 41 L38 34 Z" fill="#ffcc99"/>
 
-          <!-- Back Leg -->
           <path d="M26 52 L12 68 L5 78 L12 80 L18 72 L32 54 Z" fill="#0b5d3b"/>
           <path d="M5 78 L0 86 L9 87 L12 80 Z" fill="#ffffff"/>
 
-          <!-- Animated Kicking Leg Group -->
           <g class="kicking-leg">
             <path d="M42 49 L58 64 L72 74 L66 80 L50 68 L36 53 Z" fill="#0b5d3b"/>
             <path d="M72 74 L80 77 L78 85 L66 80 Z" fill="#d9a63b"/>
           </g>
         </svg>
 
-        <!-- Animated Bouncing & Spinning Football -->
         <div class="ball-3d-dribble"></div>
       </div>
     </div>
@@ -582,37 +676,60 @@
   </div>
 
   <div class="section-title">⚽ টুর্নামেন্টের বিবরণ</div>
+
+  <!-- RULES SECTION -->
   <div class="rules">
-    <div class="rule-item"><div class="rule-num">১</div><div>মোট <b>১৬ টি দল</b> ও নকআউট পদ্ধতিতে অনুষ্ঠিত হবে।</div></div>
-    <div class="rule-item"><div class="rule-num">২</div><div>প্রত্যেকটি মূল দলে <b>১১ জন</b> করে প্লেয়ার খেলবে এবং আরও <b>৫ জন</b> প্লেয়ার এক্সট্রা হিসেবে মূল দলের সাথে থাকবে।</div></div>
-    <div class="rule-item"><div class="rule-num">৩</div><div>এই টুর্নামেন্টের প্রত্যেকটি দল তার নিজ দলের/ক্লাবের জার্সি এবং বল বাধ্যতামূলক সাথে আনতে হবে।</div></div>
-    <div class="rule-item"><div class="rule-num">৪</div><div>খেলায় কোন প্রকার বিশৃঙ্খলা সৃষ্টি করিলে কমিটি জরিমানা ও বহিষ্কার করার ক্ষমতা রাখে।</div></div>
-    <div class="rule-item"><div class="rule-num">৫</div><div>এই টুর্নামেন্টের প্রত্যেকটি খেলা আন্তর্জাতিক ফুটবল ফেডারেশন <b>(FIFA)</b> এর নিয়ম কানুন অনুসারে পরিচালিত হবে।</div></div>
+    <div class="rule-item">
+      <div class="rule-num">১</div>
+      <h2>মোট <b>১৬ টি দল</b> ও নকআউট পদ্ধতিতে অনুষ্ঠিত হবে।</h2>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">২</div>
+      <h2>প্রত্যেকটি মূল দলে <b>১১ জন</b> করে প্লেয়ার খেলবে এবং আরও <b>৫ জন</b> প্লেয়ার এক্সট্রা হিসেবে মূল দলের সাথে থাকবে।</h2>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">৩</div>
+      <h2>এই টুর্নামেন্টের প্রত্যেকটি দল তার নিজ দলের/ক্লাবের <b>জার্সি এবং বল</b> বাধ্যতামূলক সাথে আনতে হবে।</h2>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">৪</div>
+      <h2>খেলায় কোন প্রকার বিশৃঙ্খলা সৃষ্টি করিলে কমিটি <b>জরিমানা ও বহিষ্কার</b> করার ক্ষমতা রাখে।</h2>
+    </div>
+    <div class="rule-item">
+      <div class="rule-num">৫</div>
+      <h2>এই টুর্নামেন্টের প্রত্যেকটি খেলা আন্তর্জাতিক ফুটবল ফেডারেশন <b>(FIFA)</b> এর নিয়ম কানুন অনুসারে পরিচালিত হবে।</h2>
+    </div>
   </div>
 
+  <!-- UPDATED ENTRY FEE & PRIZES SECTION (25PX TEXT) -->
   <div class="highlight-row">
     <div class="fee-box">
       <div class="lbl">💰 এন্ট্রি ফি</div>
-      <div class="amt">১,৫০০ টাকা মাত্র</div>
+      <div class="amt">১,৫০০/-</div>
     </div>
     <div class="prizes">
       <div class="prize-card gold">
-        <div class="prize-medal">🥇</div>
-        <div class="p-lbl">চ্যাম্পিয়ন দল</div>
+        <div class="prize-header-flex">
+          <span class="prize-medal">🥇</span>
+          <span class="p-lbl">চ্যাম্পিয়ন দল</span>
+        </div>
         <div class="p-amt">৩৫,০০০/- টাকা</div>
         <div class="p-words">(পঁয়ত্রিশ হাজার টাকা মাত্র)</div>
       </div>
       <div class="prize-card silver">
-        <div class="prize-medal">🥈</div>
-        <div class="p-lbl">রানার্স-আপ দল</div>
+        <div class="prize-header-flex">
+          <span class="prize-medal">🥈</span>
+          <span class="p-lbl">রানার্স-আপ দল</span>
+        </div>
         <div class="p-amt">২৫,০০০/- টাকা</div>
         <div class="p-words">(পঁচিশ হাজার টাকা মাত্র)</div>
       </div>
     </div>
   </div>
 
+  <!-- CENTERED ORGANIZER SECTION WITH 24PX TEXT -->
   <div class="organizer">
-    <div><b>উদ্বোধক ও সহযোগিতায়:</b> মো. শরীফুজ্জামান শরীফ (প্রশাসক, জেলা পরিষদ, চুয়াডাঙ্গা)</div>
+    <div class="line1"><b>উদ্বোধক ও সহযোগিতায়:</b> মো. শরীফুজ্জামান শরীফ (প্রশাসক, জেলা পরিষদ, চুয়াডাঙ্গা)</div>
     <div class="line2">🏛 আয়োজনে ও পরিচালনায়: নাগদাহ ইউনিয়নবাসী — নাগদাহ অনির্বাণ সংঘ</div>
   </div>
 
